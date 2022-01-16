@@ -1,0 +1,28 @@
+---
+layout: test.njk
+eleventyNavigation:
+  key: nav-new
+  order: 2
+---
+<br />
+<nav class="flow">
+  <h2><span>new</span></h2>
+  <nav class="pl-4">
+    {%- for ea in nav %}
+    {%- set eaUrl %}/{{ea}}/{% endset %}
+    <h2{% if eaUrl == page.url %} class="text-green-500"{% endif %}><a href="{{ eaUrl }}">{{ ea }}</a></h2>
+    {%- endfor %}
+  </nav>
+{# 
+  <nav class="pl-4">
+  {{ collections.all | eleventyNavigation | eleventyNavigationToHtml({
+    listElement: 'div',
+    listItemElement: 'h2',
+    activeListItemClass: 'text-red-500',
+    activeAnchorClass: 'underline',
+    activeKey: eleventyNavigation.key
+  }) | safe }}
+  </nav>
+#}
+
+</nav>

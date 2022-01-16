@@ -5,5 +5,12 @@
   "main": "index.js",
   "repository": "git@github.com:wommy/components_tm.git",
   "author": "wommy <tom@technomad.media>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0-beta.10",
+    "@11ty/eleventy-navigation": "^0.3.2"
+  }
 }
